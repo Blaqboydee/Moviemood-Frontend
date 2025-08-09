@@ -9,7 +9,7 @@ import AdminShowtimeForm from "./pages/AdminShowtimeForm";
 import Bookticket from "./pages/Bookticket";
 import MoviePage from "./pages/Moviepage";
 import SelectSeatsPage from "./pages/SelectSeatsPage";
-import FoodAndDrinks from "./pages/Foodanddrinks";
+import FoodAndDrinks from "./pages/FoodandDrinks";
 import FoodAdmin from "./pages/AdminFoodanddrinks";
 import PaymentComponent from "./components/Payment";
 import Login from "./pages/Login";
