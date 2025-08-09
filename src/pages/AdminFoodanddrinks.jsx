@@ -43,9 +43,11 @@ const handleSubmit = async (e) => {
     ...formData,
     name: formattedName
   };
+  const API_URL = import.meta.env.VITE_API_URL;
+
 
   try {
-    await axios.post('http://localhost:6176/food/createfood', formattedData);
+    await axios.post(`${API_URL}/6176/food/createfood`, formattedData);
     console.log(formattedData);
     toast.success("Food item added successfully");
     setFormData({ name: '', category: 'snack', price: '', available: true });

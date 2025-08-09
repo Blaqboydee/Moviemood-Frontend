@@ -12,6 +12,7 @@ const AdminShowtimeForm = () => {
   });
 
   const [message, setMessage] = useState("");
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -23,7 +24,7 @@ const AdminShowtimeForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:6176/movie/showtime", formData);
+      const res = await axios.post(`${API_URL}/movie/showtime`, formData);
       setMessage(`Showtime created successfully for ${formData.time}`);
     } catch (err) {
       setMessage(err.response?.data?.message || "Something went wrong");

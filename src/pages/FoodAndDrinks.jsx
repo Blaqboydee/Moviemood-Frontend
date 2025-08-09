@@ -21,6 +21,7 @@ const FoodAndDrinks = () => {
     setShow,
   } = useCart();
   const { selectedSeats, ticketForMovie, ticketShowtime } = useTicket();
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     console.log(ticketForMovie);
@@ -28,7 +29,7 @@ const FoodAndDrinks = () => {
 
     const fetchallfoods = async () => {
       try {
-        const res = await axios.get("http://localhost:6176/food/fetchfoods");
+        const res = await axios.get(`${API_URL}/food/fetchfoods`);
         const allfoods = res.data.data;
         setfoodanddrinks(res.data.data);
         console.log(allfoods);

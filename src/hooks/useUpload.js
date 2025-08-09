@@ -115,10 +115,13 @@ export const useUpload = () => {
       trailer: convertToEmbedURL(formData.trailer),
     };
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
+
     console.log('Movie Data:', updatedFormData);
 
     axios
-      .post("http://localhost:6176/movie/upload", updatedFormData)
+      .post(`${API_URL}/6176/movie/upload`, updatedFormData)
       .then((response) => {
         console.log("Response Status:", response.status);
         console.log("Response Data:", response.data);

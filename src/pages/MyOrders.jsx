@@ -7,6 +7,7 @@ const MyOrders = () => {
 
   const user = JSON.parse(localStorage.getItem('user'));
   const userEmail = user?.email;
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     if (!userEmail) {
@@ -18,7 +19,7 @@ const MyOrders = () => {
     const fetchOrders = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:6176/bookings/user/${encodeURIComponent(userEmail)}`);
+        const response = await fetch(`${API_URL}/bookings/user/${encodeURIComponent(userEmail)}`);
         if (!response.ok) {
           throw new Error(`Error fetching orders: ${response.statusText}`);
         }

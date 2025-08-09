@@ -8,13 +8,15 @@ export const useFetchMovies = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
    const [backdropIndex, setbackdropIndex] = useState(0)
+  const API_URL = import.meta.env.VITE_API_URL;
+
 
   const prevMoviesRef = useRef([]);
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const res = await axios.get("http://localhost:6176/movie/fetch");
+        const res = await axios.get(`${API_URL}/movie/fetch`);
         const movies = res.data.data;
 
         // Avoid unnecessary updates
