@@ -3,6 +3,8 @@ import { GoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 
 export default function GoogleSignIn() {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const handleSuccess = async (credentialResponse) => {
     try {
       // Get the token from Google
@@ -11,7 +13,7 @@ export default function GoogleSignIn() {
       const token = credentialResponse.credential;
 
       // Send token to backend
-      const res = await axios.post("http://localhost:6176/auth/google-login", { token });
+      const res = await axios.post(`${API_URL}/auth/google-login`, { token });
 
       console.log("Login success:", res.data);
       // store user localStorage

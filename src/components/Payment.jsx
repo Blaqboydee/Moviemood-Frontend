@@ -22,6 +22,8 @@ const PaymentOffcanvas = () => {
   const [showEmailForm, setShowEmailForm] = useState(false);
   const [email, setEmail] = useState("");
   const [isBuying, setIsBuying] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
+
 
   // Email validation function
   const isValidEmail = (email) => {
@@ -83,8 +85,9 @@ const PaymentOffcanvas = () => {
     console.log("Time:", ticketShowtime.time);
     console.log("Date:", ticketShowtime.date);
 
+
     try {
-      const res = await fetch("http://localhost:6176/bookings/book", {
+      const res = await fetch(`${API_URL}/bookings/book`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -92,7 +92,7 @@ const DisplayMovies = () => {
                   <button
                     key={filter.key}
                     onClick={() => filtermovies(filter.key)}
-                    className={`px-3 sm:px-4 py-2 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 transform hover:scale-105 ${
+                    className={`px-3 sm:px-4 py-2 rounded-lg font-medium text-[12px] sm:text-base transition-all duration-300 transform hover:scale-105 ${
                       activeFilter === filter.key
                         ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30'
                         : 'bg-white text-gray-900 hover:bg-gray-100 hover:shadow-md'
@@ -109,7 +109,7 @@ const DisplayMovies = () => {
                 <select
                   value={selectedGenre}
                   onChange={handleGenreFilter}
-                  className="px-3 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base min-w-0 sm:min-w-[140px]"
+                  className="px-3 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-[12px] sm:text-base min-w-0 sm:min-w-[140px]"
                 >
                   <option value="">All Genres</option>
                   <option value="action">Action</option>
@@ -156,17 +156,17 @@ const DisplayMovies = () => {
         {/* Movies Grid */}
         <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 py-6">
           {displayedmovies && displayedmovies.length > 0 ? (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
+            <div className="grid px-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
               {displayedmovies.map((movie) => (
                 <Link
                   to={`/test/${movie.movieSlug}`}
                   key={movie._id}
-                  className="no-underline border-2 border-gray-700 bg-gray-800 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-800/80"
+                  className="no-underline border-2 border-gray-700 bg-gray-800 backdrop-blur-sm rounded-3xl p-[15px] lg:p-4 sm:p-2 md:p-2 2xl:p-4  shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-800/80"
                 >
                   {/* Movie Image */}
-                  <div className="relative overflow-hidden rounded-lg mb-3 aspect-[2/3]">
+                  <div className="relative overflow-hidden rounded-lg mb-2 aspect-[2.5/3] lg:aspect-[2/3] lg:mb-3">
                     <img
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                      className="w-full rounded-2xl h-full object-cover transition-transform duration-300 hover:scale-110"
                       src={movie.movieImage}
                       alt={movie.title}
                       loading="lazy"
@@ -175,7 +175,7 @@ const DisplayMovies = () => {
                   </div>
 
                   {/* Movie Title */}
-                  <h3 className="text-white font-semibold text-sm sm:text-base text-center mb-2 line-clamp-2 leading-tight">
+                  <h3 className="text-white font-semibold text-sm sm:text-base text-center mb-2  line-clamp-2 leading-tight">
                     {movie.title}
                   </h3>
 
@@ -184,7 +184,7 @@ const DisplayMovies = () => {
                     {movie.genre?.slice(0, 3).map((genre, index) => (
                       <span
                         key={index}
-                        className="px-2 py-1 text-[10px] lg:text-[12px] bg-gray-600/80 text-gray-400 text-xs rounded-full font-medium backdrop-blur-sm"
+                        className="px-2 py-1 text-[9px] lg:text-[12px] bg-gray-600/80 text-gray-400 text-xs rounded-full font-medium backdrop-blur-sm"
                       >
                         {genre}
                       </span>
