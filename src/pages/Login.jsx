@@ -20,16 +20,16 @@ const Login = () => {
       
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-md">
-        <div className="bg-slate-800/40 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 shadow-2xl hover:shadow-purple-500/10 transition-all duration-500">
+        <div className="bg-black/70 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 shadow-2xl hover:shadow-purple-500/10 transition-all duration-500">
           
 
           {/* Welcome Text */}
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-white via-amber-200 t-white bg-clip-text text-transparent mb-3">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-white via-amber-200 text-white bg-clip-text text-transparent mb-3">
               Welcome to
             </h1>
             <div className="flex items-center justify-center gap-2 mb-4">
-              <span className="text-3xl font-bold bg-gradient-to-r from-gray-400 via-orange-400 to-gray-500 bg-clip-text text-transparent">
+              <span className="text-3xl font-bold bg-gradient-to-r text-white bg-clip-text text-transparent">
                 MovieMood
               </span>
               <span className="text-2xl animate-bounce">🎬</span>
