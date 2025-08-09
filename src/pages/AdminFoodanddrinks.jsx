@@ -47,7 +47,7 @@ const handleSubmit = async (e) => {
 
 
   try {
-    await axios.post(`${API_URL}/6176/food/createfood`, formattedData);
+    await axios.post(`${API_URL}/food/createfood`, formattedData);
     console.log(formattedData);
     toast.success("Food item added successfully");
     setFormData({ name: '', category: 'snack', price: '', available: true });
