@@ -85,7 +85,7 @@ export const MovieProvider = ({ children }) => {
 
     const interval = setInterval(() => {
       setBackdropIndex((prev) => (prev + 1) % allmovies.length);
-    }, 6000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [allmovies.length]);

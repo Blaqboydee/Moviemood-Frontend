@@ -36,7 +36,7 @@ const ChangeBackdrop = () => {
   }
 
   // Get backdrop URL safely
-  const backdropUrl = allmovies[currentIndex]?.movieBackdrop;
+  const backdropUrl = allmovies[backdropIndex]?.movieBackdrop;
 
   return (
     <div
