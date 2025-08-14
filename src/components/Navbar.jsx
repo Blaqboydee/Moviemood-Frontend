@@ -3,7 +3,7 @@ import { Offcanvas } from "react-bootstrap";
 import { useCart } from "../Context/CartContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MovieMood from "../assets/MovieMood-logo.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import { usePayment } from "../Context/Paymentcontext";
 
 const Navbar = () => {
@@ -112,9 +112,7 @@ const Navbar = () => {
       {/* Top Navbar */}
       <nav
         className={`w-full px-6 sm:px-4 md:px-6 lg:px-8 xl:px-16 py-2 sm:py-3 md:py-2 lg:py-0 fixed z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-black/10 backdrop-blur-lg shadow-lg"
-            : "bg-black/10"
+          isScrolled ? "bg-black/10 backdrop-blur-lg shadow-lg" : "bg-black/10"
         }`}
       >
         <div className="flex items-center justify-between w-full">
@@ -128,7 +126,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Links */}
-          <div className="hidden lg:flex items-center flex-1 justify-center">
+          <div className="hidden lg:flex items-center flex-1 justify-center ">
             <div className="flex items-center justify-center space-x-6 xl:space-x-8 2xl:space-x-12">
               {navLinks.map((item) =>
                 item.action ? (
@@ -148,13 +146,17 @@ const Navbar = () => {
                     {item.name}
                   </span>
                 ) : (
-                  <Link
+                  <NavLink
                     key={item.name}
                     to={item.path}
-                    className="text-white no-underline hover:text-blue-400 font-medium text-xs xl:text-sm 2xl:text-[13px] transition-colors duration-200 whitespace-nowrap"
+                    className={({ isActive }) =>
+                      `text-white no-underline hover:text-blue-400 font-medium text-xs xl:text-sm 2xl:text-[13px] transition-colors duration-200 whitespace-nowrap ${
+                        isActive ? "text-blue-400" : ""
+                      }`
+                    }
                   >
                     {item.name}
-                  </Link>
+                  </NavLink>
                 )
               )}
             </div>
@@ -309,7 +311,7 @@ const Navbar = () => {
                 key={item.name}
                 to={item.path}
                 onClick={() => setMenuOpen(false)}
-                className="block px-3 py-2 sm:py-3 rounded-md font-medium text-xs sm:text-sm text-white hover:text-blue-400 hover:bg-white/10"
+                className="block no-underline px-3 py-2 sm:py-3 rounded-md font-medium text-xs sm:text-sm text-white hover:text-blue-400 hover:bg-white/10"
               >
                 {item.name}
               </Link>

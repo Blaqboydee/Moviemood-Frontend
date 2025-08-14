@@ -192,7 +192,7 @@ useEffect(() => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <button
                   onClick={openModal}
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md text-white px-6 py-3 rounded-full flex items-center gap-3 hover:bg-white/30 transition-all"
+                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md text-white  py-3 w-52 rounded-full flex items-center justify-center gap-1 hover:bg-white/30 transition-all"
                 >
                   <Play className="w-5 h-5 fill-current" />
                   <span className="font-medium">Watch Trailer</span>

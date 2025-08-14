@@ -8,17 +8,9 @@ const MoviesLoop = () => {
   const { allmovies, currentIndex, isAnimating, setCurrentIndex } = useMovies();
 
   // Show nothing or a loader until movies load
-  // Show loader until movies load
-if (allmovies.length === 0) {
-  return (
-    <div className="h-screen bg-black flex items-center justify-center">
-      <div className="flex flex-col items-center space-y-4">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
-        <p className="text-white text-lg">Loading movies...</p>
-      </div>
-    </div>
-  );
-}
+  if (allmovies.length === 0) {
+    return <div className="h-screen bg-black" ></div>;
+  }
 
   return (
     <div>
@@ -113,9 +105,9 @@ if (allmovies.length === 0) {
 `}
         >
           <h1
-            className="text-white font-semibold leading-tight
+            className="text-white font-extrabold leading-tight
                          md:w-[60%] sm:w-80%
-                         text-5xl  xs:text-5xl sm:text-5xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl max-[2xl]:text-[80px]"
+                         text-4xl  xs:text-5xl sm:text-5xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl max-[2xl]:text-[80px]"
           >
             {allmovies[currentIndex]?.title}
           </h1>
@@ -131,7 +123,7 @@ if (allmovies.length === 0) {
         {/* Buttons */}
         <div className="flex sm:flex-row items-start sm:items-center gap-2 sm:gap-2.5">
           <Link
-            className="bg-white text-black rounded-3xl border-none font-semibold
+            className="bg-white border-4  text-black rounded-3xl font-semibold
                        text-[10px] xs:text-xs sm:text-[12px] lg:text-[15px]
                        py-1.5 xs:py-2 lg:py-2.5
                        px-3 xs:px-4 lg:px-[15px]
