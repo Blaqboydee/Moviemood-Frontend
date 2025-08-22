@@ -4,8 +4,13 @@ import { NavLink } from 'react-router-dom'
 const AdminSidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true)
   const [isMobile, setIsMobile] = useState(false)
+  const [adminName, setAdminName] = useState("")
+
+  
 
   useEffect(() => {
+    setAdminName(JSON.parse(localStorage.getItem("user")).name)
+
     const checkMobile = () => {
       if(window.innerWidth < 768) {
         setIsMobile(true)
@@ -18,6 +23,7 @@ const AdminSidebar = () => {
     checkMobile()
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
+
   }, [])
 
   const navItems = [
@@ -97,7 +103,7 @@ const AdminSidebar = () => {
             </div>
             <div>
               <h1 className="text-white font-semibold text-lg">Admin Panel</h1>
-              <p className="text-slate-400 text-xs">Cinema Management</p>
+              <p className="text-slate-400 text-xs">Moviemood Management</p>
             </div>
           </div>
         </div>
@@ -147,8 +153,8 @@ const AdminSidebar = () => {
               </svg>
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-white text-sm font-medium truncate">Admin User</p>
-              <p className="text-slate-400 text-xs truncate">Cinema Manager</p>
+              <p className="text-white text-sm font-medium truncate">Admin</p>
+              <p className="text-slate-400 text-xs truncate">{adminName}</p>
             </div>
           </div>
         </div>
