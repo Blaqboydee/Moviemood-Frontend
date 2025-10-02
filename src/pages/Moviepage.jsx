@@ -17,7 +17,7 @@ const MoviePage = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [formatted, setFormatted] = useState([]);
-  const fakeNow = new Date("2025-06-21T14:00"); // We are pretending the date is july 21st to see if it filters expired dates out
+  const fakeNow = new Date(); //validdates
   const [validShowtimes, setValidShowtimes] = useState([]);
 
     useEffect(() => {

@@ -18,7 +18,7 @@ createRoot(document.getElementById("root")).render(
         <CartProvider>
           <TicketProvider>
             <PaymentProvider>
-              <GoogleOAuthProvider clientId="280958126418-0l80j1g57v0p67vc0j5unk4o71jovg9d.apps.googleusercontent.com">
+              <GoogleOAuthProvider clientId="">280958126418-0l80j1g57v0p67vc0j5unk4o71jovg9d.apps.googleusercontent.com
             <App />
               </GoogleOAuthProvider>
             </PaymentProvider>
