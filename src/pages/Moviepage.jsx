@@ -17,7 +17,7 @@ const MoviePage = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [formatted, setFormatted] = useState([]);
-  const fakeNow = new Date('2025-08-05T00:00:00'); //pretending the date is august fifth
+  const fakeNow = new Date('2025-06-05T00:00:00'); //pretending the date is august fifth
   const [validShowtimes, setValidShowtimes] = useState([]);
 
     useEffect(() => {
