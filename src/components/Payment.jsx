@@ -105,7 +105,6 @@ const PaymentOffcanvas = () => {
       });
 
       const result = await res.json();
-
       if (res.ok) {
         alert("Booking successful!");
         navigate("/");
@@ -119,7 +118,7 @@ const PaymentOffcanvas = () => {
       console.error("Booking error:", error);
       alert("Something went wrong");
     } finally {
-      setIsBuying(false); // re-enable button
+      setIsBuying(false); 
     }
   };
 

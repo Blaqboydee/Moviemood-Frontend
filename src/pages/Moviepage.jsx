@@ -217,7 +217,7 @@ useEffect(() => {
                     {themovie.genre?.map((genre, index) => (
                       <span
                         key={index}
-                        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium"
+                        className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium"
                       >
                         {genre}
                       </span>
@@ -288,7 +288,7 @@ useEffect(() => {
                               <Link 
                                 to={`/select-seats/${themovie._id}/${themovieshowtime[time.index]._id}`}
                                 key={index}
-                                className="text-center no-underline px-3 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105"
+                                className="text-center no-underline px-3 py-2 bg-blue-600  text-white rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105"
                               >
                                 {time.time}
                               </Link>
@@ -365,7 +365,7 @@ useEffect(() => {
                               <Link 
                                 to={`/select-seats/${themovie._id}/${themovieshowtime[time.index]._id}`}
                                 key={index}
-                                className="text-center no-underline px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
+                                className="text-center no-underline px-4 py-3 bg-blue-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
                               >
                                 {time.time}
                               </Link>
@@ -401,7 +401,7 @@ useEffect(() => {
                     {themovie.genre?.map((genre, index) => (
                       <span
                         key={index}
-                        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all"
+                        className="bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all"
                       >
                         {genre}
                       </span>
