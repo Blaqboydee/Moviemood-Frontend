@@ -105,6 +105,7 @@ const PaymentOffcanvas = () => {
       });
 
       const result = await res.json();
+      console.log(result);
       if (res.ok) {
         alert("Booking successful!");
         navigate("/");
